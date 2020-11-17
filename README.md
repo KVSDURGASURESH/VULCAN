@@ -1,6 +1,6 @@
 Template for DevOps Essentials 
 
-Project **Vulcan** is intended to provide a blueprint bundled with essential tools & automation required for any service/application to be hosted on a public cloud . 
+Project `VULCAN` is intended to provide a blueprint bundled with essential tools & automation required for any service/application to be hosted on a public cloud . 
 
 `H I G H L I G H T S  :`
 
