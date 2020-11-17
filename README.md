@@ -16,27 +16,28 @@ Project **Vulcan** is intended to provide a blueprint bundled with essential too
 - Automation to host service/application on  AWS, GCP & OCI 
 
 `T E C H  S T A C K :`
+	
+	
+- Programming Language 
+   > Python3  [ Version : > 3.7 ]
 
-Programming Language
-    Python3 [ Version : > 3.7 ]
+- Build Tools 
+   > Gradle [ Version : ]
 
-Build Tools (1 from the list)
-    Gradle [ Version : ]
+- Continuous Integration Tool 
+  > Jenkins [ Version : ]
 
-Continuous Integration Tool:
-    Jenkins [ Version : ]
+- Infrastructure as a Code 
+  > Terraform [ Version : ]
 
-Infrastructure as a Code 
-    Terraform [ Version : ]
+- Containerization Tool 
+  > Docker [ Version : ]
 
-Containerization Tool
-    Docker [ Version : ]
+- Docker Registry 
+  > Docker Hub [ Version : ]
 
-Docker Registry 
-    Docker Hub [ Version : ]
-
-Container Orchestration
-    Kubernetes [ Version : ]
+- Container Orchestration 
+  > Kubernetes [ Version : ]
     
   
 
