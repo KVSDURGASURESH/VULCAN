@@ -2,6 +2,7 @@ Template for DevOps Essentials
 
 Project **Vulcan** is intended to provide a blueprint bundled with essential tools & automation required for any service/application to be hosted on a public cloud . 
 
+
 - An in-out Python Project
 - 3 Tier web application based on MVC paradigm
 - Microservices Architecture 
@@ -13,35 +14,28 @@ Project **Vulcan** is intended to provide a blueprint bundled with essential too
 - CI with Jenkins 
 - Automation to host service/application on  AWS, GCP & OCI 
 
-**T E C H  S T A C K :**
+T E C H  S T A C K :
 
 Programming Language
-    Python3 | Version: 
-    Linux Bash | Version : 
+    Python3 [ Version : > 3.7 ]
 
 Build Tools (1 from the list)
-    Maven | Verision
-    Gradle | Version
+    Gradle [ Version : ]
 
-Continous Integration Tool:
-    Jenkins | Version :
+Continuous Integration Tool:
+    Jenkins [ Version : ]
 
 Infrastructure as a Code 
-    Terraform | Version : 
-
-Version Control 
-    GIT | Version :
-    GITHUB 
+    Terraform [ Version : ]
 
 Containerization Tool
-    Docker | Version :
+    Docker [ Version : ]
 
-Artifactory Registry 
-    Docker Hub | Version :
-    JFrog | Version :  (Optional)
+Docker Registry 
+    Docker Hub [ Version : ]
 
 Container Orchestration
-    Kubernetes | Version: 
+    Kubernetes [ Version : ]
     
   
 
