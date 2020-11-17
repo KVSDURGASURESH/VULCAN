@@ -2,6 +2,7 @@ Template for DevOps Essentials
 
 Project **Vulcan** is intended to provide a blueprint bundled with essential tools & automation required for any service/application to be hosted on a public cloud . 
 
+`H I G H L I G H T S  :`
 
 - An in-out Python Project
 - 3 Tier web application based on MVC paradigm
@@ -14,7 +15,7 @@ Project **Vulcan** is intended to provide a blueprint bundled with essential too
 - CI with Jenkins 
 - Automation to host service/application on  AWS, GCP & OCI 
 
-T E C H  S T A C K :
+`T E C H  S T A C K :`
 
 Programming Language
     Python3 [ Version : > 3.7 ]
