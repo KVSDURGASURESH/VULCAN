@@ -1,0 +1,7 @@
+# Project exclude paths
+/venv/
+.idea
+.DS_Store
+
+# Local DB
+/whatnxt/whatnxt.db
