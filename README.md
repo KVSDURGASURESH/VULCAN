@@ -19,25 +19,25 @@ Project `VULCAN` is intended to provide a blueprint bundled with essential tools
 	
 	
 - Programming Language 
-   > Python3  [ Version : > 3.7 ]
+   > Python3  [ > v3.7 ]
 
 - Build Tools 
-   > Gradle [ Version : ]
+   > Gradle [ v6x ]
 
 - Continuous Integration Tool 
-  > Jenkins [ Version : ]
+  > Jenkins [ v2.2x ]
 
 - Infrastructure as a Code 
-  > Terraform [ Version : ]
+  > Terraform [ > v0.12 ]
 
 - Containerization Tool 
-  > Docker [ Version : ]
+  > Docker [ > v19.03x ]
 
 - Docker Registry 
-  > Docker Hub [ Version : ]
+  > Docker Hub 
 
 - Container Orchestration 
-  > Kubernetes [ Version : ]
+  > Kubernetes [ > v1.17 ]
     
   
 
