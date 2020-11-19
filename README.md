@@ -1,4 +1,4 @@
-# What-Next App
+# VULCAN 
 
 Template for DevOps Essentials 
 
