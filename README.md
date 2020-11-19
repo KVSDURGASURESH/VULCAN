@@ -1,8 +1,8 @@
 # VULCAN 
 
-A Blueprint   for DevOps Essentials 
+A full stack blueprint for DevOps Essentials .
 
-Project `VULCAN` is intended to provide a blueprint bundled with essential tools & automation required for any service/application to be hosted on a public cloud . 
+Project `VULCAN` is intended to provide a blueprint/template bundled with a full stack essential tool kit encapsulated with automation & utility scripts required for any service/application to be hosted on a public cloud . 
 
 `H I G H L I G H T S  :`
 
