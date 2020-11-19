@@ -1,4 +1,4 @@
-# React What Next App
+# React What-Next App
 
 This is a sample ToDo App as a part of series Build your 1st WebApp with Python & React.
 
