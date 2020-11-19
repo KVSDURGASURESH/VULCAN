@@ -1,12 +1,12 @@
 # What-Next App
 
-This is a sample ToDo App as a part of series Build your 1st WebApp with Python & React.
+This is a basic Reminder App 
 
-1. Part 1 - How to build a Backend API with Flask
+1. Part 1 - How to build a Backend API with Flask - [What-Nxt App](https://github.com/KVSDURGASURESH/VULCAN/tree/pvt/dkagitha/release1/whatnxt).
 2. Part 2 - How to integrate APIs with a React Frontend
 
 #### Source :
- This repo has been forked from [https://github.com/kabirbaidhya/react-todo-app.git] and modified to fit my requirement. You can check it out for Step by Step React tutorial
+ This repo has been forked from [React-Todo-App](https://github.com/kabirbaidhya/react-todo-app.git) and modified to fit my requirement. You can check it out for Step by Step React tutorial
 
 
 ## Instructions
