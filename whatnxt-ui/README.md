@@ -1,4 +1,4 @@
-# React Todo App
+# React What Next App
 
 This is a sample ToDo App as a part of series Build your 1st WebApp with Python & React.
 
@@ -13,8 +13,10 @@ This repo has been forked from [https://github.com/kabirbaidhya/react-todo-app.g
 
 First clone this repository.
 ```bash
-$ git clone https://github.com/bhavaniravi/react-todo-app.git
+$ git clone https://github.com/KVSDURGASURESH/VULCAN.git
 ```
+
+Navigate to whatnxt-ui directory 
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
 ```bash
