@@ -17,6 +17,9 @@ $ git clone https://github.com/KVSDURGASURESH/VULCAN.git
 ```
 
 Navigate to whatnxt-ui directory 
+```bash
+$ cd whatnxt-ui
+```
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
 ```bash
