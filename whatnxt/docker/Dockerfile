@@ -12,6 +12,8 @@ WORKDIR /core
 
 RUN pip3 install -r requirements.txt 
 
+EXPOSE 5000
+
 COPY ./core/__init__.py /core
 COPY ./core/applicationView.py /core
 COPY ./core/models.py /core
@@ -21,4 +23,3 @@ COPY ./entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
-EXPOSE 5000

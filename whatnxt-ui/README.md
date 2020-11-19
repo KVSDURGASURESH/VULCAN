@@ -5,8 +5,8 @@ This is a sample ToDo App as a part of series Build your 1st WebApp with Python 
 1. Part 1 - How to build a Backend API with Flask
 2. Part 2 - How to integrate APIs with a React Frontend
 
-This repo has been forked from [https://github.com/kabirbaidhya/react-todo-app.git] and modified to fit my requirement. You can check it out for Step by Step React tutorial
-
+#### Source :
+ This repo has been forked from [https://github.com/kabirbaidhya/react-todo-app.git] and modified to fit my requirement. You can check it out for Step by Step React tutorial
 
 
 ## Instructions
@@ -30,3 +30,29 @@ Run it
 ```bash
 $ npm start # or yarn start
 ```
+
+### To Run App in Docker
+
+1. Checkout `Dockerfile`. It is created by [following this tutorial](https://mherman.org/blog/dockerizing-a-react-app/).
+
+2. To build docker image 
+
+    ```bash
+    $ cd < Dockerfile directory >
+    ```
+
+    ```bash
+    $ docker build -t what-nxt-ui:latest .
+    ```
+3. To run the docker container 
+    ```bash
+    $ docker run -d --name what-nxt-ui -p 3000:3000  what-nxt-ui:latest
+    ```
+4. To access in browser , enter the following in the URL field
+    ```bash
+    http://0.0.0.0:3000/
+    ```
+
+
+
+
