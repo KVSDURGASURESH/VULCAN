@@ -1,0 +1,58 @@
+# A docker-compose must always start by the version tag.
+version: '3.7'
+
+# docker-composes works with services.
+# 1 service = 1 container.
+# For example, a service maybe, a server, a client, a database...
+# We use the keyword 'services' to start to create services.
+services:
+
+  # First service (container): the backend app .
+
+  # We use the keyword 'whatnxt' for backend app .
+  whatnxt:
+    # The keyword "build" will allow you to define
+    # the path to the Dockerfile to use to create the image
+    # that will allow you to execute the service.
+    # Here 'server/' corresponds to the path to the server folder
+    # that contains the Dockerfile to use.
+    build: whatnxt/docker
+
+    # The command to execute once the image is created.
+    # The following command will execute "python ./server.py".
+    # command: python ./server.py
+
+    # In our case, we want to use port 5000 on our machine and
+    ports:
+      - "5000:5000"
+
+    expose:
+        - "5000"
+    
+    image : whatnxt-app:latest
+
+  # Second service (container): the whatnxt-ui.
+  # We use the keyword 'whatnxt-ui' for the server.
+  whatnxt-ui:
+    # Here 'whatnxt-ui/ corresponds to the path to the client folder
+    # that contains the Dockerfile to use.
+    build: whatnxt-ui/docker
+
+    # The command to execute once the image is created.
+    # The following command will execute "python ./client.py".
+    # command: python ./client.py
+
+    # In our case, we want to use port 5000 on our machine and
+    ports:
+        - "3000:3000"
+
+    expose:
+        - "3000"
+        
+    image : whatnxt-ui:latest
+
+    # The keyword'depends_on' allows you to define whether the service
+    # should wait until other services are ready before launching.
+    # Here, we want the 'client' service to wait until the 'server' service is ready.
+    depends_on:
+      - whatnxt
