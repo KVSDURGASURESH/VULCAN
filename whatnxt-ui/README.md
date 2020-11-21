@@ -9,27 +9,26 @@ This is a basic Reminder App
  This repo has been forked from [React-Todo-App](https://github.com/kabirbaidhya/react-todo-app.git) and modified to fit my requirement. You can check it out for Step by Step React tutorial
 
 
-## Instructions
+### To Run App 
 
 First clone this repository.
 ```bash
 $ git clone https://github.com/KVSDURGASURESH/VULCAN.git
 ```
 
-Navigate to whatnxt-ui directory 
-```bash
-$ cd whatnxt-ui
-```
-
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
 ```bash
-$ npm install # or yarn
+$ yarn
+```
+```bash
+$ yarn build # or npm install
 ```
 
 Run it
 ```bash
-$ npm start # or yarn start
+$ yarn start # npm start
 ```
+
 
 ### To Run App in Docker
 
@@ -42,15 +41,15 @@ $ npm start # or yarn start
     ```
 
     ```bash
-    $ docker build -t what-nxt-ui:latest .
+    $ docker build -t whatnxt-ui:latest .
     ```
 3. To run the docker container 
     ```bash
-    $ docker run -d --name what-nxt-ui -p 3000:3000  what-nxt-ui:latest
+    $ docker run -d --name whatnxt-ui -p 3000:3000  whatnxt-ui:latest
     ```
 4. To access in browser , enter the following in the URL field
     ```bash
-    http://0.0.0.0:3000/
+    http://localhost:3000/
     ```
 
 

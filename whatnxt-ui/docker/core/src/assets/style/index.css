@@ -15,14 +15,14 @@ body {
 
 .todolist h1 {
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 11px;
     text-align: center;
     text-transform: uppercase;
 }
 
 .todolist .info {
     position: absolute;
-    margin-top: 20px;
+    margin-top: 11px;
     left: 0;
     right: 0;
     color: #999;
