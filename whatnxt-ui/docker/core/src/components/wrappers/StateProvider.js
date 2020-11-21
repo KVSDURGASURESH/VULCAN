@@ -31,8 +31,8 @@ class StateProvider extends Component {
         return <div>{children}</div>;
     }
 
-    addNew(text) {
-        let response = addToList(this.state.list, {text, completed: false});
+    addNew(title) {
+        let response = addToList(this.state.list, {Title : title, completed: false});
         response.then(response => response.json())
             .then(data => {  
                 console.log(data)
