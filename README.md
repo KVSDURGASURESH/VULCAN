@@ -19,7 +19,6 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
 
 `T E C H  S T A C K :`
 	
-	
 - Programming Language 
    > Python3 | >= v3.7 
 
@@ -41,8 +40,12 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
 
 - Container Orchestration 
   > Kubernetes | >= v1.17 
-    
-  
+
+
+`HOW TO RUN THE PROJECT :`
+
+1. See [ How To ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/HowToRun.md).
+
 
 
 

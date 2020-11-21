@@ -39,6 +39,8 @@ $ git clone https://github.com/KVSDURGASURESH/VULCAN.git
     ```bash
     http://localhost:5000/whatnxt
     ```
+    
+    curl -X POST -d '{"Title":"Errands", "Description":"To collect documents", "completed":false, "id":2}' 'http://localhost:5000/whatnxt' -H 'Content-Type: application/json'
 
 ####  Credits :
  [This is a code that comes along with great tutorial](https://medium.com/@bhavaniravi/build-your-1st-python-web-app-with-flask-b039d11f101c)

@@ -2,33 +2,42 @@
 
 This is a basic Reminder App 
 
-1. Part 1 - How to build a Backend API with Flask - [What-Nxt App](https://github.com/KVSDURGASURESH/VULCAN/tree/pvt/dkagitha/release1/whatnxt).
+1. Part 1 - How to build a Backend API with Flask - [What-Nxt App](https://github.com/KVSDURGASURESH/VULCAN/tree/master/whatnxt).
 2. Part 2 - How to integrate APIs with a React Frontend
 
 #### Source :
  This repo has been forked from [React-Todo-App](https://github.com/kabirbaidhya/react-todo-app.git) and modified to fit my requirement. You can check it out for Step by Step React tutorial
 
 
-### To Run App 
+### To Run App (!Docker; want to run as a docker?  skip & jump to below section)
 
-First clone this repository.
+1. First clone this repository.
 ```bash
 $ git clone https://github.com/KVSDURGASURESH/VULCAN.git
 ```
 
-Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
+2. Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) [`Yarn`](https://classic.yarnpkg.com/en/docs/install/#mac-stable) installed in your system.
+
+If using MACOS 
+
+```bash
+$ brew install yarn
+```
+
+3. Run Yarn/npm
+
 ```bash
 $ yarn
 ```
+
 ```bash
 $ yarn build # or npm install
 ```
+4. Start the server (ui)
 
-Run it
 ```bash
 $ yarn start # npm start
 ```
-
 
 ### To Run App in Docker
 
@@ -51,6 +60,8 @@ $ yarn start # npm start
     ```bash
     http://localhost:3000/
     ```
+
+    Enter any Text and Validate all CRUD operations
 
 
 
