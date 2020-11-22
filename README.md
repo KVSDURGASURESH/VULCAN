@@ -44,31 +44,31 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
 
 `HOW TO RUN THE PROJECT :`
 
-  1. See [ How To ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/HowToRun.md).
+1. See [ How To ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/HowToRun.md).
 
-  2. Tree view of the Project
+2. Tree view of the Project
 
-    Install Tree if !Exists 
+  Install Tree if !Exists 
 
-    ```bash
-    LINUX
-    $ sudo apt-get install tree
+  ```bash
+  LINUX
+  $ sudo apt-get install tree
 
-    MACOS
-    $ brew install tree
-    ```
-    
-    ```bash
-    $ tree -I 'node_modules|cache|lib|venv|build'
-    ```
-
-    ```bash
-    $ WINDOWS (GitBash)
-    ```
+  MACOS
+  $ brew install tree
+  ```
   
-    [download exe](http://gnuwin32.sourceforge.net/packages/tree.htm) 
-    and add it to "C:\Program Files\Git\usr\bin" :
-  
+  ```bash
+  $ tree -I 'node_modules|cache|lib|venv|build'
+  ```
+
+  ```bash
+  $ WINDOWS (GitBash)
+  ```
+
+  [download exe](http://gnuwin32.sourceforge.net/packages/tree.htm) 
+  and add it to "C:\Program Files\Git\usr\bin" :
+
 
 
 
