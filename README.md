@@ -46,6 +46,10 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
 
 1. See [ How To ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/HowToRun.md).
 
+2. To see tree Structure of the project 
+    ```bash
+    $ tree -I 'node_modules|cache|lib|venv|build'
+    ```
 
 
 
