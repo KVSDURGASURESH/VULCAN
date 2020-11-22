@@ -27,9 +27,12 @@ services:
       - "5000:5000"
 
     expose:
-        - "5000"
+      - "5000"
     
     image : whatnxt-app:latest
+
+    # volumes : 
+    #   - ./whatnxt/whatnxt.db:/core/whatnxt.db:ro
 
   # Second service (container): the whatnxt-ui.
   # We use the keyword 'whatnxt-ui' for the server.
@@ -47,7 +50,7 @@ services:
         - "3000:3000"
 
     expose:
-        - "3000"
+      - "3000"
         
     image : whatnxt-ui:latest
 
