@@ -16,7 +16,7 @@
     $ ./gradlew build 
     ```
 
-3. `Check` the possible gradle tasks 
+3. `Check` the available  gradle tasks 
     ```bash
     $ ./gradlew task 
     ```
@@ -42,12 +42,13 @@
     ```
 
 
-Note : UI would take ~1-2 min to come up on the browser , keep patience!
+    `Note` : UI would take ~1-2 min to come up on the browser !
+
 
 `TEST & VALIDATE :`
 
 
-1. Access WhatNxt App UI on any browser
+1. Access WhatNxt App UI on any `browser`
 
     ```bash
     $ http://localhost:3000
@@ -62,16 +63,16 @@ Note : UI would take ~1-2 min to come up on the browser , keep patience!
     
 2. To submit via CURL or POSTMAN
 
-    CURL
+    `CURL`
     ```bash
     $ curl -X POST -d '{"Title":"Errands", "Description":"To collect documents", "completed":false, "id":2}' 'http://localhost:5000/whatnxt' -H 'Content-Type: application/json'
     ```  
 
-    POSTMAN 
+    `POSTMAN`
 
     ENDPOINT : http://localhost:5000/whatnxt
     PAYLOAD: 
         {"Title":"Errands", "Description":"To collect documents", "completed":false, "id":2}
     
-    TODO: Update the swagger spec here 
+    `TODO`: Update the swagger spec here 
 
