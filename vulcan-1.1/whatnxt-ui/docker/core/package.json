@@ -1,5 +1,5 @@
 {
-  "name": "react-todo-app",
+  "name": "whatnxt-ui",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -14,6 +14,7 @@
     "recompose": "^0.23.5"
   },
   "scripts": {
+    "prestart": "if [ ! -d node_modules ]; then npm install; fi",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

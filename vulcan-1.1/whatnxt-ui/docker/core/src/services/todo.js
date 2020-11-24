@@ -1,4 +1,3 @@
-import update from 'immutability-helper';
 let PORT = 5000
 let BASE_URL = "http://localhost:" + PORT 
 let headers = {
