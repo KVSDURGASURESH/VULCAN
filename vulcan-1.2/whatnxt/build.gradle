@@ -11,9 +11,14 @@ plugins{
     id "com.palantir.docker-compose" version "0.25.0"
 } 
 
+version '0.1.0-SNAPSHOT'
+
 docker {
     name "${project.name}:${project.version}"
     copySpec.from("src").into("")
+    /* Need to create your own docker hub account, create a repo and provide the username/dockerID & repo details below 
+       usage : tag 'DockerHub', "<dockerID>/<repo_name>:${project.version}"  
+    */
     tag 'DockerHub', "dkagitha/whatnxt-app:${project.version}"
 }
 
