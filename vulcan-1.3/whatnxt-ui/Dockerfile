@@ -5,9 +5,9 @@ LABEL       Description="WhatNxt Image" \
 
 EXPOSE 3000
 
-COPY ./core /home/app
+COPY src/core /home/app
 WORKDIR /home/app/core
-COPY ./entrypoint.sh /
+COPY src/entrypoint.sh /
  
 RUN chmod +x /entrypoint.sh
 
