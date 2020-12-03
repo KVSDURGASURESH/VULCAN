@@ -17,8 +17,8 @@ pipeline {
                 sh "sh /entrypoint.sh"
                 dir('vulcan-1.4'){
                     script { 
-                        sh "echo dockerImage"
-                        sh "./gradlew build -PjenVersion=dockerImage"
+                        sh "echo $dockerImage"
+                        sh "./gradlew build -PjenVersion=$dockerImage"
                     }
                 }
                 
@@ -30,7 +30,7 @@ pipeline {
                     script{
                         sh "echo $dockerImage"
                         sh "./gradlew docker -PjenVersion=$dockerImage"
-                        sh "./gradlew dockerTagDockerHub -PjenVersion=dockerImage"
+                        sh "./gradlew dockerTagDockerHub -PjenVersion=$dockerImage"
                         
                     }
                 }
@@ -42,7 +42,7 @@ pipeline {
                 withDockerRegistry([ credentialsId: "dockerhub_cred", url: "" ]) {
                   script { 
                         sh "echo $dockerImage"
-                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=dockerImage"
+                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
                     }
 
                 }                  
