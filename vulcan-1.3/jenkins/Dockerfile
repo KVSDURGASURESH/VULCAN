@@ -1,4 +1,6 @@
 FROM jenkins/jenkins
+LABEL       Description="Jenkins with Docker Image" \
+            Maintainer="<suresh.kvsd@gmail.com>"
 USER root
 RUN apt-get update && \
 apt-get -y install apt-transport-https \
