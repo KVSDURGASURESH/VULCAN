@@ -1,9 +1,8 @@
 pipeline {   
     environment { 
-        registry1 = "dkagitha/whatnxt-app" 
-        registry2 = "dkagitha/whatnxt-ui" 
         registryCredential = 'dockerhub_cred' 
-        dockerImage = '' 
+        dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
+
     }
     agent any 
     stages { 
@@ -18,9 +17,8 @@ pipeline {
                 sh "sh /entrypoint.sh"
                 dir('vulcan-1.4'){
                     script { 
-                        dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
-                        sh "echo $dockerImage"
-                        sh "./gradlew build -PjenVersion=$dockerImage"
+                        sh "echo dockerImage"
+                        sh "./gradlew build -PjenVersion=dockerImage"
                     }
                 }
                 
@@ -30,10 +28,9 @@ pipeline {
             steps { 
                 dir('vulcan-1.4'){
                     script{
-                        dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
                         sh "echo $dockerImage"
                         sh "./gradlew docker -PjenVersion=$dockerImage"
-                        sh "./gradlew dockerTagDockerHub -PjenVersion=$dockerImage"
+                        sh "./gradlew dockerTagDockerHub -PjenVersion=dockerImage"
                         
                     }
                 }
@@ -44,7 +41,8 @@ pipeline {
             steps {
                 withDockerRegistry([ credentialsId: "dockerhub_cred", url: "" ]) {
                   script { 
-                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
+                        sh "echo $dockerImage"
+                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=dockerImage"
                     }
 
                 }                  
