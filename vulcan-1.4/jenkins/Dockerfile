@@ -58,9 +58,4 @@ RUN chmod +x /entrypoint.sh \
 
 # ENTRYPOINT [ "/entrypoint.sh" ]
 
-# Copy docker activity file
-COPY ./dockerBuildPush.sh /
-RUN chmod +x /dockerBuildPush.sh \
-&& chown -R jenkins:jenkins /dockerBuildPush.sh
-
 USER jenkins

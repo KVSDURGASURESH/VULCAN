@@ -44,7 +44,7 @@ pipeline {
             steps {
                 withDockerRegistry([ credentialsId: "dockerhub_cred", url: "" ]) {
                   script { 
-                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub"
+                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
                     }
 
                 }                  
