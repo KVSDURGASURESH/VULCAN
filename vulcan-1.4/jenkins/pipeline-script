@@ -18,7 +18,9 @@ pipeline {
                 sh "sh /entrypoint.sh"
                 dir('vulcan-1.4'){
                     script { 
-                        sh "./gradlew build"
+                        dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
+                        sh "echo $dockerImage"
+                        sh "./gradlew build -PjenVersion=$dockerImage"
                     }
                 }
                 
