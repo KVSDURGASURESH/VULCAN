@@ -9,5 +9,8 @@ group 'vulcan.whatnxt'
 
 allprojects {
 
-    version '1.4.0-SNAPSHOT' 
+    task('incrVersion').doLast{
+        args(jenVersion)
+    }
+
 }

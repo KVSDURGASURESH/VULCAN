@@ -15,17 +15,17 @@ plugins{
 
 
 docker {
-    name "${project.name}:${project.version}"
+    name "${project.name}:${project.jenVersion}"
     copySpec.from("src").into("")
     /* Need to create your own docker hub account, create a repo and provide the username/dockerID & repo details below 
        usage : tag 'DockerHub', "<dockerID>/<repo_name>:${project.version}"  
     */
-    tag 'DockerHub', "dkagitha/whatnxt-ui:${project.version}"
+    tag 'DockerHub', "dkagitha/whatnxt-ui:${project.jenVersion}"
 }
 
 dockerRun {
     name "${project.name}"
-    image "${project.name}:${project.version}"
+    image "${project.name}:${project.jenVersion}"
     ports '3000:3000'
     clean true
 }
