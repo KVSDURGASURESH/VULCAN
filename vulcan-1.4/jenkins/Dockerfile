@@ -9,6 +9,11 @@ ENV GRADLE_VERSION=6.7
 ENV GRADLE_USER_HOME /.gradle
 ENV GRADLE_HOME=/opt/gradle
 
+# docker adequate permission clear
+
+RUN groupadd docker
+RUN usermod -a -G docker jenkins
+
 ENV WORKSPACE_HOME=${JENKINS_HOME}/workspace
 # The below  parameter are set specifically for this project , can be changed accordingly 
 # WORKDIR ${WORKSPACE_HOME}/{jenkins-workspace-name}/{directory-name}
