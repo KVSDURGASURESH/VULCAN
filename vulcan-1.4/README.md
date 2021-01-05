@@ -1,6 +1,6 @@
 
-## VULCAN 1.2
-#### DOCKER [ CONTAINERIZATION ] + GRADLE [ BUILD + DEPENDENCY MANAGEMENT ] +  DOCKERHUB [ DOCKER REGISTRY ]
+## VULCAN 1.4
+#### DOCKER [ CONTAINERIZATION ] + GRADLE [ BUILD + DEPENDENCY MANAGEMENT ] +  DOCKERHUB [ DOCKER REGISTRY ] + JENKINS PIPELINE
 
 ##### RECOMMENDED ENV : DEV
 
@@ -8,7 +8,7 @@
 
 1. Stay at root (where you have the parent build.gradle file is present)
     ```bash
-    $ cd <root directory > ex: vulcan-1.2
+    $ cd <root directory > ex: vulcan-1.4
     ```    
 
 2. `Build` the project 
