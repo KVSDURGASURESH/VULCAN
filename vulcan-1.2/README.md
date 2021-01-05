@@ -41,9 +41,10 @@
     $ ./gradlew dockerPushDockerHub
     ```
 
+    <img width="1310" alt="VULCAN-DockerHub-1" src="https://user-images.githubusercontent.com/24245515/103702895-cc090d00-4fcc-11eb-9159-e315ba802760.png">
 
-    `Note` : UI would take ~1-2 min to come up on the browser !
-
+    <img width="1255" alt="VULCAN-DockerHub-2" src="https://user-images.githubusercontent.com/24245515/103702953-d0352a80-4fcc-11eb-890b-78df84db8c0e.png">
+    
 
 `TEST & VALIDATE :`
 
@@ -60,6 +61,8 @@
     2. Delete any Item and Validate DELETE
     3. Post any new items via postman or curl
     4. Refresh the page and validate GET 
+
+    `Note` : UI would take ~1-2 min to come up on the browser !
     
 2. To submit via CURL or POSTMAN
 

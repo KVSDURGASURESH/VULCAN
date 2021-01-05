@@ -20,11 +20,7 @@
     $ docker-compose up -d
     ```
 
-    `Note` : UI would take ~1-2 min to come up on the browser !
-
-
 `TEST & VALIDATE :`
-
 
 1. Access WhatNxt App UI on any `browser`
 
@@ -38,6 +34,11 @@
     2. Delete any Item and Validate DELETE
     3. Post any new items via postman or curl
     4. Refresh the page and validate GET 
+
+
+    `Note` : UI would take ~1-2 min to come up on the browser !
+
+    <img width="972" alt="VULCAN-WhatNxt-UI" src="https://user-images.githubusercontent.com/24245515/103701136-80099880-4fcb-11eb-91cf-7f7c097fd415.png">
     
 2. To submit via CURL or POSTMAN
 
@@ -53,4 +54,6 @@
         {"Title":"Errands", "Description":"To collect documents", "completed":false, "id":2}
     
     `TODO`: Update the swagger spec here 
+
+    <img width="1093" alt="VULCAN-WhatNxt-Postman" src="https://user-images.githubusercontent.com/24245515/103701135-7ed86b80-4fcb-11eb-817c-7fafaed0f062.png">
 

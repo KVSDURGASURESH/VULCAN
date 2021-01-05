@@ -8,9 +8,6 @@
 
 This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Dockerized` and with `Jenkins` around which is brought UP via a docker image , helps building and  pushing the whatnxt images to  `DockerHub` using  `Gradle` build commands with auto incremental builds via `Pipeline` scripts .
 
-Optional : Uses `Gradle` for build management (not used during building/deploying the docker) 
-
-`HOW TO RUN VIA JENKINS :`
 
 `PRE-REQUISITES` :
 
@@ -26,7 +23,7 @@ Optional : Uses `Gradle` for build management (not used during building/deployin
     https://webhookrelay.com/v1/examples/receiving-webhooks-on-localhost.html
 
     Creating Buckets <br />
-    ![Webhook Buckets ](PROJECTS/VULCAN/images/VULCAN-Webhook-Relay.png?raw=true) <br />
+    <img width="1432" alt="VULCAN-Webhook-Relay" src="https://user-images.githubusercontent.com/24245515/103701132-7ed86b80-4fcb-11eb-93af-7365505e7832.png"> <br />
 
     `[b].` Commands to execute as per the above documentation post installation 
 
@@ -46,6 +43,7 @@ Optional : Uses `Gradle` for build management (not used during building/deployin
     ```bash
     $ cd jenkins
     ```
+
     ```bash
     $ docker build -t dkagitha/jenkins-docker .
     ```
@@ -66,7 +64,7 @@ Optional : Uses `Gradle` for build management (not used during building/deployin
     ```
 
     2.5. Login to UI , with username and password
-    ![Jenkins Login](PROJECTS/VULCAN/images/VULCAN-Jenkins-Login.png?raw=true)
+    <img width="416" alt="VULCAN-Jenkins-Login" src="https://user-images.githubusercontent.com/24245515/103701127-7da73e80-4fcb-11eb-93fb-3bb87616cca2.png">
 
 
 3. From Dashboard , Click "New Item" 
@@ -74,8 +72,7 @@ Optional : Uses `Gradle` for build management (not used during building/deployin
     3.1. Select Pipeline Project in the next screen <br />
 
     3.2. Copy the content from "PROJECTS/VULCAN/vulcan-1.3/jenkins/pipeline-script" into Pipelinse script section <br />
-
-    ![Pipeline Project View ](PROJECTS/VULCAN/images/VULCAN-1.4-Pipeline-Screenshot.png?raw=true)
+    <img width="877" alt="VULCAN-Jenkins-Pipeline" src="https://user-images.githubusercontent.com/24245515/103701130-7e3fd500-4fcb-11eb-8be8-3f29c5260679.png">  <br />
 
     Save & Apply 
 
@@ -83,15 +80,24 @@ Optional : Uses `Gradle` for build management (not used during building/deployin
     More on Jenkins Pipeline : https://www.jenkins.io/doc/book/pipeline/ <br />
 
     3.3 Back to Dashboard , pick the project and click Build Now <br />
-    ![Successful Build ](PROJECTS/VULCAN/images/VULCAN-1.4-Pipeline-Screenshot.png?raw=true)
+    <img width="1274" alt="VULCAN-1 4-Pipeline-Screenshot" src="https://user-images.githubusercontent.com/24245515/103701116-78e28a80-4fcb-11eb-999e-ae150df88593.png">
+
 
 <br />
 More on Jenkins : https://www.jenkins.io/doc/ 
 
 `TEST & VALIDATE :`
 
+1. Verify if the images are pushed to DockerHub repository 
 
-1. Access WhatNxt App UI on any `browser`
+    Login to DockerHub 
+
+    <img width="1310" alt="VULCAN-DockerHub-1" src="https://user-images.githubusercontent.com/24245515/103702895-cc090d00-4fcc-11eb-9159-e315ba802760.png">
+
+    <img width="1255" alt="VULCAN-DockerHub-2" src="https://user-images.githubusercontent.com/24245515/103702953-d0352a80-4fcc-11eb-890b-78df84db8c0e.png">
+
+
+2. Access WhatNxt App UI on any `browser`
 
     ```bash
     $ http://localhost:3000
@@ -106,9 +112,9 @@ More on Jenkins : https://www.jenkins.io/doc/
 
     `Note` : UI would take ~1-2 min to come up on the browser !
 
-    ![Submit task via WhatNxt UI](PROJECTS/VULCAN/images/VULCAN-WhatNxt-UI.png?raw=true)
+    <img width="972" alt="VULCAN-WhatNxt-UI" src="https://user-images.githubusercontent.com/24245515/103701136-80099880-4fcb-11eb-91cf-7f7c097fd415.png">
     
-2. To submit via CURL or POSTMAN
+3. To submit via CURL or POSTMAN
 
     `CURL`
     ```bash
@@ -123,5 +129,5 @@ More on Jenkins : https://www.jenkins.io/doc/
     
     `TODO`: Update the swagger spec here 
 
-    ![Postman POST ](PROJECTS/VULCAN/images/VULCAN-WhatNxt-Postman.png?raw=true)
+    <img width="1093" alt="VULCAN-WhatNxt-Postman" src="https://user-images.githubusercontent.com/24245515/103701135-7ed86b80-4fcb-11eb-817c-7fafaed0f062.png">
 
