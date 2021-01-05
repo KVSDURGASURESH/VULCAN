@@ -32,7 +32,7 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
   > [ Terraform ](https://www.terraform.io/downloads.html) | >= v0.12 
 
 - Containerization Tool 
-  > [ Docker ](https://docs.docker.com/engine/install/) | >= v19.03x 
+  > [ Docker ](https://docs.docker.com/engine/install/) | >= v19.03x <br /> 
   > [ Docker-compose ](https://docs.docker.com/compose/install/) | >= v1.26.2
 
 - Docker Registry 

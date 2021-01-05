@@ -13,7 +13,7 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
 
 1. Setup Webhook Relay , Why ? 
 
-    `[a].` If we need to connect GitHub with internally deployed Jenkins which is not reachable from outside. In order to do this, we will be using Webhook Relay <br />
+    `[1.1].` If we need to connect GitHub with internally deployed Jenkins which is not reachable from outside. In order to do this, we will be using Webhook Relay <br />
     https://webhookrelay.com/blog/2017/11/23/github-jenkins-guide/
 
     Installation [ here in this version we have used ] : <br />
@@ -25,7 +25,7 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     Creating Buckets <br />
     <img width="1432" alt="VULCAN-Webhook-Relay" src="https://user-images.githubusercontent.com/24245515/103701132-7ed86b80-4fcb-11eb-93af-7365505e7832.png"> <br />
 
-    `[b].` Commands to execute as per the above documentation post installation 
+    `[1.2].` Commands to execute as per the above documentation post installation 
 
     ```bash
     $ relay login -k <key> -s <secret>
@@ -33,12 +33,12 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     $ relay forward --bucket vulcan-github-jenkins http://localhost:8080/vulcan-github-webhook/
     ``` 
 
-    `[c].` Other Options and ways to use : <br />  https://webhookrelay.com/intro/
+    `[1.3].` Other Options and ways to use : <br />  https://webhookrelay.com/intro/
          
 
 2. Firstly , to make sure  Jenkins is UP and Running 
 
-    2.1. Navigate to Jenkins directory and build the docker image 
+    `[2.1].` Navigate to Jenkins directory and build the docker image 
 
     ```bash
     $ cd jenkins
@@ -48,30 +48,32 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     $ docker build -t dkagitha/jenkins-docker .
     ```
 
-    2.2. Make sure the docker image is build 
+    `[2.2].` Make sure the docker image is build 
     ```bash
     $ docker images
     ``` 
 
-    2.3. Run the docker 
+    `[2.3].` Run the docker 
     ```bash
     $ docker run --rm -d  --name jenkins-docker -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock dkagitha/jenkins-docker
     ```    
 
-    2.4. Make sure the docker is up and running 
+    `[2.4].` Make sure the docker is up and running 
     ```bash
     $ docker ps 
     ```
 
-    2.5. Login to UI , with username and password
+    `[2.5].` Login to UI , with username and password
     <img width="416" alt="VULCAN-Jenkins-Login" src="https://user-images.githubusercontent.com/24245515/103701127-7da73e80-4fcb-11eb-93fb-3bb87616cca2.png">
 
 
-3. From Dashboard , Click "New Item" 
+`HOW TO RUN VIA JENKINS :`
 
-    3.1. Select Pipeline Project in the next screen <br />
+1. From Dashboard , Click "New Item" 
 
-    3.2. Copy the content from "PROJECTS/VULCAN/vulcan-1.3/jenkins/pipeline-script" into Pipelinse script section <br />
+    `[1.1].` Select Pipeline Project in the next screen <br />
+
+    `[1.2].` Copy the content from "PROJECTS/VULCAN/vulcan-1.3/jenkins/pipeline-script" into Pipelinse script section <br />
     <img width="877" alt="VULCAN-Jenkins-Pipeline" src="https://user-images.githubusercontent.com/24245515/103701130-7e3fd500-4fcb-11eb-8be8-3f29c5260679.png">  <br />
 
     Save & Apply 
@@ -79,7 +81,7 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     <br />
     More on Jenkins Pipeline : https://www.jenkins.io/doc/book/pipeline/ <br />
 
-    3.3 Back to Dashboard , pick the project and click Build Now <br />
+    `[1.3].` Back to Dashboard , pick the project and click Build Now <br />
     <img width="1274" alt="VULCAN-1 4-Pipeline-Screenshot" src="https://user-images.githubusercontent.com/24245515/103701116-78e28a80-4fcb-11eb-999e-ae150df88593.png">
 
 

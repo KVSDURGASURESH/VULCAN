@@ -48,8 +48,6 @@
 
 `TEST & VALIDATE :`
 
-`TEST & VALIDATE :`
-
 1. Verify if the images are pushed to DockerHub repository 
 
     Login to DockerHub 
