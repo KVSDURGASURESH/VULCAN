@@ -37,7 +37,7 @@ pipeline {
                 
             } 
         }
-        stage('Deploy docker image to Registry') { 
+        stage('Push docker image to Registry') { 
             steps {
                 withDockerRegistry([ credentialsId: "dockerhub_cred", url: "" ]) {
                   script { 
@@ -48,6 +48,18 @@ pipeline {
                 }                  
             }
         } 
+
+        stage('Deploy docker on local-remote host') { 
+            steps { 
+                dir('vulcan-1.4'){
+                    script{
+                        sh "echo $dockerImage"
+                        sh "./gradlew dockerRun -PjenVersion=$dockerImage"                        
+                    }
+                }
+                
+            } 
+        }
     }
 }
 
