@@ -123,7 +123,7 @@ More on Jenkins : https://www.jenkins.io/doc/
 
     `POSTMAN`
 
-    ENDPOINT : http://localhost:5000/whatnxt
+    ENDPOINT : http://localhost:5000/whatnxt <br />
     PAYLOAD: 
         {"Title":"Errands", "Description":"To collect documents", "completed":false, "id":2}
     

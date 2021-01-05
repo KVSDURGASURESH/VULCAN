@@ -20,26 +20,30 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
 `T E C H  S T A C K :`
 	
 - Programming Language 
-   > Python3 | >= v3.7 
+   > [ Python3 ](https://www.python.org/downloads/) | >= v3.7 
 
 - Build Tools 
-   > Gradle | >= v6x 
+   > [ Gradle ](https://gradle.org/install/) | >= v6x 
 
 - Continuous Integration Tool 
-  > Jenkins | >= v2.2x 
+  > [ Jenkins ](https://www.jenkins.io/doc/) | >= v2.2x 
 
 - Infrastructure as a Code 
-  > Terraform | >= v0.12 
+  > [ Terraform ](https://www.terraform.io/downloads.html) | >= v0.12 
 
 - Containerization Tool 
-  > Docker | >= v19.03x 
-  > Docker-compose | >= v1.26.2
+  > [ Docker ](https://docs.docker.com/engine/install/) | >= v19.03x 
+  > [ Docker-compose ](https://docs.docker.com/compose/install/) | >= v1.26.2
 
 - Docker Registry 
-  > Docker Hub 
+  > [ Docker Hub ](https://docs.docker.com/docker-hub/) 
 
 - Container Orchestration 
-  > Kubernetes | >= v1.17 
+  > [ Kubernetes ](https://kubernetes.io/docs/tasks/tools/) | >= v1.17 <br /> 
+  > [ kubectl ](https://kubernetes.io/docs/tasks/tools/install-kubectl/) | >= v1.2 <br /> 
+  > [ minikube ](https://minikube.sigs.k8s.io/docs/start/) 
+
+`NOTE : Make sure to install all the above dependecies as per your Operating System & desired bit processor before running any of the subprojects , any specific pre-requisites (if any)  are mentioned in detail on each of the subproject's  README` <br /> 
 
 
 `HOW TO RUN THE SUB PROJECTS :`
@@ -50,7 +54,7 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
 
     [ VULCAN-1.2 ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/vulcan-1.2/README.md ) : GIT `[ DISTRIBUTED VERSION CONTROL ]` + DOCKER `[ CONTAINERIZATION ]` + GRADLE `[ BUILD + DEPENDENCY MANAGEMENT ]` +  DOCKERHUB `[ DOCKER REGISTRY ]`
 
-    [ VULCAN-1.3 ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/vulcan-1.4/README.md ) : GIT `[ DISTRIBUTED VERSION CONTROL ]` + DOCKER `[ CONTAINERIZATION ]` + GRADLE `[ BUILD + DEPENDENCY MANAGEMENT ]` +  DOCKERHUB `[ DOCKER REGISTRY ]` + JENKINS PIPELINE `[ CONTINOUS INTEGRATION ]`
+    [ VULCAN-1.3 ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/vulcan-1.3/README.md ) : GIT `[ DISTRIBUTED VERSION CONTROL ]` + DOCKER `[ CONTAINERIZATION ]` + GRADLE `[ BUILD + DEPENDENCY MANAGEMENT ]` +  DOCKERHUB `[ DOCKER REGISTRY ]` + JENKINS PIPELINE `[ CONTINOUS INTEGRATION ]`
 
     [ VULCAN-1.4 ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/vulcan-1.4/README.md ) : GIT `[ DISTRIBUTED VERSION CONTROL ]` + DOCKER `[ CONTAINERIZATION ]` + GRADLE `[ BUILD + DEPENDENCY MANAGEMENT ]` +  DOCKERHUB `[ DOCKER REGISTRY ]` + JENKINS PIPELINE WITH GRADLE BUILD COMMANDS `[ CONTINOUS INTEGRATION ]`
 
