@@ -1,7 +1,7 @@
 pipeline {   
     environment { 
         registryCredential = 'dockerhub_cred' 
-        dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
+        dockerImage = "1.5." + "$BUILD_NUMBER-" + "SNAPSHOT"
 
     }
     agent any 
@@ -15,7 +15,7 @@ pipeline {
         stage('Setting up Gradle') { 
             steps { 
                 sh "sh /entrypoint.sh"
-                dir('vulcan-1.4'){
+                dir('vulcan-1.5'){
                     script { 
                         sh "echo $dockerImage"
                         sh "./gradlew build -PjenVersion=$dockerImage"
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Building docker image') { 
             steps { 
-                dir('vulcan-1.4'){
+                dir('vulcan-1.5'){
                     script{
                         sh "echo $dockerImage"
                         sh "./gradlew docker -PjenVersion=$dockerImage"
@@ -51,7 +51,7 @@ pipeline {
 
         stage('Deploy docker on local-remote host') { 
             steps { 
-                dir('vulcan-1.4'){
+                dir('vulcan-1.5'){
                     script{
                         sh "echo $dockerImage"
                         sh "./gradlew dockerRun -PjenVersion=$dockerImage"                        
