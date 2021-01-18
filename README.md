@@ -43,7 +43,7 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
   > [ kubectl ](https://kubernetes.io/docs/tasks/tools/install-kubectl/) | >= v1.2 <br /> 
   > [ minikube ](https://minikube.sigs.k8s.io/docs/start/) 
 
-`NOTE : Make sure to install all the above dependecies as per your Operating System & desired bit processor before running any of the subprojects , any specific pre-requisites (if any)  are mentioned in detail on each of the subproject's  README` <br /> 
+`NOTE : Make sure to install all the above dependencies as per the Operating System & desired bit processor before running any of the subprojects , any other specific pre-requisites (if any) are detailed on each of the subproject's README` <br /> 
 
 
 `HOW TO RUN THE SUB PROJECTS :`
@@ -57,6 +57,9 @@ Project `VULCAN` is intended to provide a blueprint/template bundled with a full
     [ VULCAN-1.3 ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/vulcan-1.3/README.md ) : GIT `[ DISTRIBUTED VERSION CONTROL ]` + DOCKER `[ CONTAINERIZATION ]` + GRADLE `[ BUILD + DEPENDENCY MANAGEMENT ]` +  DOCKERHUB `[ DOCKER REGISTRY ]` + JENKINS PIPELINE `[ CONTINOUS INTEGRATION ]`
 
     [ VULCAN-1.4 ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/vulcan-1.4/README.md ) : GIT `[ DISTRIBUTED VERSION CONTROL ]` + DOCKER `[ CONTAINERIZATION ]` + GRADLE `[ BUILD + DEPENDENCY MANAGEMENT ]` +  DOCKERHUB `[ DOCKER REGISTRY ]` + JENKINS PIPELINE WITH GRADLE BUILD COMMANDS `[ CONTINOUS INTEGRATION ]`
+
+    [ VULCAN-1.5 ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/vulcan-1.5/README.md ) : GIT `[ DISTRIBUTED VERSION CONTROL ]` + DOCKER `[ CONTAINERIZATION ]` + GRADLE `[ BUILD + DEPENDENCY MANAGEMENT ]` +  DOCKERHUB `[ DOCKER REGISTRY ]` + JENKINS PIPELINE WITH GRADLE BUILD COMMANDS `[ CONTINOUS INTEGRATION ]` + KUBERNETES `[ CONTAINER ORCHESTRSATION ]`
+
 
 
 2. [ Tree view of the Project  ](https://github.com/KVSDURGASURESH/VULCAN/tree/master/treeView.md )

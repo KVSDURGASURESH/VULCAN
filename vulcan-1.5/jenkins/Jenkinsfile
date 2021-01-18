@@ -1,0 +1,65 @@
+pipeline {   
+    environment { 
+        registryCredential = 'dockerhub_cred' 
+        dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
+
+    }
+    agent any 
+    stages { 
+        stage('Cloning Git') { 
+            steps { 
+
+                git 'https://github.com/KVSDURGASURESH/VULCAN' 
+            }
+        } 
+        stage('Setting up Gradle') { 
+            steps { 
+                sh "sh /entrypoint.sh"
+                dir('vulcan-1.4'){
+                    script { 
+                        sh "echo $dockerImage"
+                        sh "./gradlew build -PjenVersion=$dockerImage"
+                    }
+                }
+                
+            } 
+        }
+        stage('Building docker image') { 
+            steps { 
+                dir('vulcan-1.4'){
+                    script{
+                        sh "echo $dockerImage"
+                        sh "./gradlew docker -PjenVersion=$dockerImage"
+                        sh "./gradlew dockerTagDockerHub -PjenVersion=$dockerImage"
+                        
+                    }
+                }
+                
+            } 
+        }
+        stage('Push docker image to Registry') { 
+            steps {
+                withDockerRegistry([ credentialsId: "dockerhub_cred", url: "" ]) {
+                  script { 
+                        sh "echo $dockerImage"
+                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
+                    }
+
+                }                  
+            }
+        } 
+
+        stage('Deploy docker on local-remote host') { 
+            steps { 
+                dir('vulcan-1.4'){
+                    script{
+                        sh "echo $dockerImage"
+                        sh "./gradlew dockerRun -PjenVersion=$dockerImage"                        
+                    }
+                }
+                
+            } 
+        }
+    }
+}
+
