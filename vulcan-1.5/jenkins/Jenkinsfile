@@ -8,7 +8,6 @@ pipeline {
     stages { 
         stage('Cloning Git') { 
             steps { 
-
                 git 'https://github.com/KVSDURGASURESH/VULCAN' 
             }
         } 
