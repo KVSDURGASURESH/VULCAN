@@ -45,7 +45,7 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     ```
 
     ```bash
-    $ docker build -t dkagitha/jenkins-docker .
+    $ docker build -t dkagitha/jenkins-docker-gradle .
     ```
 
     `[2.2].` Make sure the docker image is build 
@@ -55,7 +55,7 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
 
     `[2.3].` Run the docker 
     ```bash
-    $ docker run --rm -d  --name jenkins-docker -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock dkagitha/jenkins-docker
+    $ docker run --rm -d  --name jenkins-docker -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock dkagitha/jenkins-docker-gradle
     ```    
 
     `[2.4].` Make sure the docker is up and running 

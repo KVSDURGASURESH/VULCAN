@@ -18,7 +18,7 @@ ENV WORKSPACE_HOME=${JENKINS_HOME}/workspace
 # The below  parameter are set specifically for this project , can be changed accordingly 
 # WORKDIR ${WORKSPACE_HOME}/{jenkins-workspace-name}/{directory-name}
 WORKDIR ${WORKSPACE_HOME}/vulcan-1.5/vulcan-1.5/
-ENV PROJECT_HOME=${WORKSPACE_HOME}/vulcan-1.5/vulcan-1.5/
+ENV PROJECT_HOME=${WORKSPACE_HOME}/vulcan-1.5/vulcan-1.5
 
 RUN apt-get update && \
 apt-get -y install apt-transport-https \
