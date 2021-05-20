@@ -1,6 +1,6 @@
 pipeline {   
     environment { 
-        registryCredential = 'dockerhub_cred' 
+        registryCredential = 'DockerHub' 
         dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
 
     }
@@ -39,7 +39,7 @@ pipeline {
         }
         stage('Push docker image to Registry') { 
             steps {
-                withDockerRegistry([ credentialsId: "dockerhub_cred", url: "" ]) {
+                withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
                   script { 
                         sh "echo $dockerImage"
                         sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
