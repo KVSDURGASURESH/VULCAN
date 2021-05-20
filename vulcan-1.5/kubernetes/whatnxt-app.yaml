@@ -1,35 +1,52 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: whatnxt
+  labels:
+    app: whatnxt
+
+---
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   name: whatnxt-app-deployment
   namespace: whatnxt
-  labels:
-    app: whatnxt-app
+  labels: 
+    app: whatnxt 
+    tier: back-end
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: whatnxt-app
+      app: whatnxt
+      tier: back-end
   template:
-    metadata:
+    metadata: 
+      name: whatnxt-app-pod
       labels:
-        app: whatnxt-app
+        app: whatnxt
+        tier: back-end
     spec:
       containers:
-      - name: whatnxt-app
-        image: dkagitha/whatnxt-app:1.5.1-SNAPSHOT
-        ports:
-        - containerPort: 5000
+        - name: whatnxt-app
+          image: dkagitha/whatnxt-app:1.4.10-SNAPSHOT
+          ports:
+          - containerPort: 5000
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: whatnxt-app
-  namespace: whatnxt
-spec:
-  selector:
-    app: whatnxt-app
+  name: whatnxt-app-service
+  labels:
+    app: whatnxt
+    tier: back-end
+spec: 
   ports:
-    - protocol: TCP
-      port: 5000
-      targetPort: 5000
+  - port: 5000
+    targetPort: 5000
+  selector:
+      app: whatnxt 
+      tier: back-end
+
+

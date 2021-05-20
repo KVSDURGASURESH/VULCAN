@@ -19,6 +19,27 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     Installation [ here in this version we have used ] : <br />
     https://webhookrelay.com/v1/installation/cli.html 
 
+    I'm Felling Lucky:
+
+      ```For MAC```
+    ```
+    $ sudo curl --output /usr/local/bin/relay https://storage.googleapis.com/webhookrelay/downloads/relay-darwin-amd64 
+    ```    
+    
+    ```For Linux 64 Bit```
+    ```
+    $ sudo curl --output /usr/local/bin/relay https://storage.googleapis.com/webhookrelay/downloads/relay-darwin-amd64 
+    ```    
+
+    ```For Windows : Download -> ``` https://storage.googleapis.com/webhookrelay/downloads/relay-windows-amd64.exe. 
+    
+    ```Or if you have curl installed, use this command: ```
+    ```
+    curl -LO https://storage.googleapis.com/webhookrelay/downloads/relay-windows-amd64.exe
+    ```    
+
+
+
     Receiving webhooks on localhost : <br />
     https://webhookrelay.com/v1/examples/receiving-webhooks-on-localhost.html
 
@@ -30,11 +51,15 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     ```bash
     $ relay login -k <key> -s <secret>
 
+    $ relay forward --bucket <bucket name> http://localhost:8080/<webhook name>/
+
+    ex:
     $ relay forward --bucket vulcan-github-jenkins http://localhost:8080/vulcan-github-webhook/
     ``` 
 
     `[1.3].` Other Options and ways to use : <br />  https://webhookrelay.com/intro/
-         
+
+  
 
 2. Firstly , to make sure  Jenkins is UP and Running 
 
