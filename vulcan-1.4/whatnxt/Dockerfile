@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 LABEL       Description="WhatNxt Image" \
             Maintainer="<suresh.kvsd@gmail.com>"
 
-RUN apt-get update && apt-get install -y python3 python3-dev python3-pip nginx
+RUN apt-get update && apt-get install -y python3 python3-dev python3-pip nginx curl
 
 # We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt /core/requirements.txt

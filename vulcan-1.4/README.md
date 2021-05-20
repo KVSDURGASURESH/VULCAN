@@ -94,6 +94,29 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     $ http://localhost:8080
     ```
 
+    If you happen to see this page 
+
+    <img src="misc/images/unlock-jenkins.png" width=415>
+
+    - Login to the container and cat the file mentioned on the screen 
+    ```
+    $ docker exec -it <contianer name> bash
+    ex:
+    $ docker exec -it 451614e5e407 bash
+    
+    $ jenkins@451614e5e407:~/workspace/vulcan-1.4/vulcan-1.4$ cat /var/jenkins_home/secrets/initialAdminPassword
+
+    c46b901745b34************** --> Password 
+    ```
+    - Copy the output password and paste in the Administrator password text box
+
+    - Create a new admin user if promted 
+
+    - Make sure you set the GIT credentials for cloning into the GIT repo 
+      https://www.thegeekstuff.com/2016/10/jenkins-git-setup/ 
+
+    - Make sure if the recommended plugins are installed succesfully - can check under Manage Jenkins section
+
     <img width="416" alt="VULCAN-Jenkins-Login" src="https://user-images.githubusercontent.com/24245515/103701127-7da73e80-4fcb-11eb-93fb-3bb87616cca2.png">
 
 3. Login into docker 
