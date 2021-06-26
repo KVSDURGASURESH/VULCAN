@@ -14,7 +14,7 @@ ENV GRADLE_HOME=/opt/gradle
 RUN groupadd docker && \
 usermod -a -G docker jenkins 
 # usermod -a -G docker jenkins && \
-# chmod 600 /var/run/docker.sock
+# chmod 666 /var/run/docker.sock
 
 ENV WORKSPACE_HOME=${JENKINS_HOME}/workspace
 # The below  parameter are set specifically for this project , can be changed accordingly 

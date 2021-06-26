@@ -38,15 +38,14 @@ pipeline {
             } 
         }
         stage('Push docker image to Registry') { 
-            steps {
-                docker.withRegistry("", "DockerHub") {
-                  script { 
+            steps {        
+                script { 
+                    docker.withRegistry("", registryCredential) {
                         sh "echo $dockerImage"
-                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
-                    }
-
-                }                  
-            }
+                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage" 
+                    }   
+                }
+            }                  
         } 
 
         stage('Deploy docker on local-remote host') { 
