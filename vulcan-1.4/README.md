@@ -100,7 +100,7 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
 
     - Login to the container and cat the file mentioned on the screen 
     ```
-    $ docker exec -it <contianer name> bash
+    $ docker exec -it <container name> bash
     ex:
     $ docker exec -it 451614e5e407 bash
     
@@ -131,7 +131,9 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
 
     `[1.1].` Select Pipeline Project in the next screen <br />
 
-    `[1.2].` Copy the content from "PROJECTS/VULCAN/vulcan-1.3/jenkins/Jenkinsfile" into Pipeline script section <br />
+    `[1.2].` Copy the content from "PROJECTS/VULCAN/vulcan-1.3/jenkins/Jenkinsfile" into Pipeline script section
+    
+     <br />
     <img width="877" alt="VULCAN-Jenkins-Pipeline" src="https://user-images.githubusercontent.com/24245515/103701130-7e3fd500-4fcb-11eb-8be8-3f29c5260679.png">  <br />
 
     Save & Apply 
