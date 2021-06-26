@@ -39,7 +39,7 @@ pipeline {
         }
         stage('Push docker image to Registry') { 
             steps {
-                withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
+                docker.withRegistry("", "DockerHub") {
                   script { 
                         sh "echo $dockerImage"
                         sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
