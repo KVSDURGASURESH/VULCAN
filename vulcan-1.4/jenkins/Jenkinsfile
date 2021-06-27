@@ -37,16 +37,16 @@ pipeline {
                 
             } 
         }
-        stage('Push docker image to Registry') { 
-            steps {        
-                script { 
-                    docker.withRegistry('', registryCredential) {
-                        dockerImage.push()
+        // stage('Push docker image to Registry') { 
+        //     steps {        
+        //         script { 
+        //             docker.withRegistry('', registryCredential) {
+        //                 dockerImage.push()
 
-                    }   
-                }
-            }                  
-        } 
+        //             }   
+        //         }
+        //     }                  
+        // } 
 
         stage('Deploy docker on local-remote host') { 
             steps { 
