@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'vulcan-1.3'
-include 'whatnxt', 'whatnxt-ui'
+include 'whatnxt-app', 'whatnxt-ui'

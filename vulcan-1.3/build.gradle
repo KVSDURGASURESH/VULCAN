@@ -7,9 +7,14 @@
 
 group 'vulcan.whatnxt'
 
-
+ext{
+    username = 'dkagitha'
+}
 
 allprojects {
 
-    version '1.3.0-SNAPSHOT' 
+    task('incrVersion').doLast{
+        args(jenVersion)
+    }
+
 }

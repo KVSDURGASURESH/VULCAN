@@ -1,20 +1,21 @@
 pipeline {   
     environment { 
-        registryCredential = 'dockerhub_cred' 
-        dockerImage = "1.5." + "$BUILD_NUMBER-" + "SNAPSHOT"
+        registryCredential = 'DockerHub' 
+        dockerImage = "1.4." + "$BUILD_NUMBER-" + "SNAPSHOT"
 
     }
     agent any 
     stages { 
         stage('Cloning Git') { 
             steps { 
+
                 git 'https://github.com/KVSDURGASURESH/VULCAN' 
             }
         } 
         stage('Setting up Gradle') { 
             steps { 
                 sh "sh /entrypoint.sh"
-                dir('vulcan-1.5'){
+                dir('vulcan-1.4'){
                     script { 
                         sh "echo $dockerImage"
                         sh "./gradlew build -PjenVersion=$dockerImage"
@@ -25,7 +26,7 @@ pipeline {
         }
         stage('Building docker image') { 
             steps { 
-                dir('vulcan-1.5'){
+                dir('vulcan-1.4'){
                     script{
                         sh "echo $dockerImage"
                         sh "./gradlew docker -PjenVersion=$dockerImage"
@@ -36,21 +37,20 @@ pipeline {
                 
             } 
         }
-        stage('Push docker image to Registry') { 
-            steps {
-                withDockerRegistry([ credentialsId: "dockerhub_cred", url: "" ]) {
-                  script { 
-                        sh "echo $dockerImage"
-                        sh "cd $PROJECT_HOME && ./gradlew dockerPushDockerHub -PjenVersion=$dockerImage"
-                    }
+        // stage('Push docker image to Registry') { 
+        //     steps {        
+        //         script { 
+        //             docker.withRegistry('', registryCredential) {
+        //                 dockerImage.push()
 
-                }                  
-            }
-        } 
+        //             }   
+        //         }
+        //     }                  
+        // } 
 
         stage('Deploy docker on local-remote host') { 
             steps { 
-                dir('vulcan-1.5'){
+                dir('vulcan-1.4'){
                     script{
                         sh "echo $dockerImage"
                         sh "./gradlew dockerRun -PjenVersion=$dockerImage"                        

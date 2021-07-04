@@ -1,6 +1,6 @@
 
 ## VULCAN 1.4
-#### GIT [ DISTRIBUTED VERSION CONTROL ] + DOCKER [ CONTAINERIZATION ] + GRADLE [ BUILD + DEPENDENCY MANAGEMENT ] +  DOCKERHUB [ DOCKER REGISTRY ] + JENKINS PIPELINE WITH GRADLE BUILD COMMANDS [ CONTINOUS INTEGRATION ]
+#### GIT [ DISTRIBUTED VERSION CONTROL ] + DOCKER [ CONTAINERIZATION ] + GRADLE [ BUILD + DEPENDENCY MANAGEMENT ] +  DOCKERHUB [ DOCKER REGISTRY ] + JENKINS PIPELINE WITH GRADLE BUILD COMMANDS [ CONTINOUS INTEGRATION ] + KUBERNETES [ CONTAINER ORCHESTRSATION ]
 
 ##### RECOMMENDED ENV : DEV
 
@@ -19,27 +19,6 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     Installation [ here in this version we have used ] : <br />
     https://webhookrelay.com/v1/installation/cli.html 
 
-    I'm Felling Lucky:
-
-      ```For MAC```
-    ```
-    $ sudo curl --output /usr/local/bin/relay https://storage.googleapis.com/webhookrelay/downloads/relay-darwin-amd64 
-    ```    
-    
-    ```For Linux 64 Bit```
-    ```
-    $ sudo curl --output /usr/local/bin/relay https://storage.googleapis.com/webhookrelay/downloads/relay-darwin-amd64 
-    ```    
-
-    ```For Windows : Download -> ``` https://storage.googleapis.com/webhookrelay/downloads/relay-windows-amd64.exe. 
-    
-    ```Or if you have curl installed, use this command: ```
-    ```
-    curl -LO https://storage.googleapis.com/webhookrelay/downloads/relay-windows-amd64.exe
-    ```    
-
-
-
     Receiving webhooks on localhost : <br />
     https://webhookrelay.com/v1/examples/receiving-webhooks-on-localhost.html
 
@@ -51,15 +30,11 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     ```bash
     $ relay login -k <key> -s <secret>
 
-    $ relay forward --bucket <bucket name> http://localhost:8080/<webhook name>/
-
-    ex:
     $ relay forward --bucket vulcan-github-jenkins http://localhost:8080/vulcan-github-webhook/
     ``` 
 
     `[1.3].` Other Options and ways to use : <br />  https://webhookrelay.com/intro/
-
-  
+         
 
 2. Firstly , to make sure  Jenkins is UP and Running 
 
@@ -94,29 +69,6 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
     $ http://localhost:8080
     ```
 
-    If you happen to see this page 
-
-    <img src="misc/images/unlock-jenkins.png" width=415>
-
-    - Login to the container and cat the file mentioned on the screen 
-    ```
-    $ docker exec -it <container name> bash
-    ex:
-    $ docker exec -it 451614e5e407 bash
-    
-    $ jenkins@451614e5e407:~/workspace/vulcan-1.4/vulcan-1.4$ cat /var/jenkins_home/secrets/initialAdminPassword
-
-    c46b901745b34************** --> Password 
-    ```
-    - Copy the output password and paste in the Administrator password text box
-
-    - Create a new admin user if promted 
-
-    - Make sure you set the GIT credentials for cloning into the GIT repo 
-      https://www.thegeekstuff.com/2016/10/jenkins-git-setup/ 
-
-    - Make sure if the recommended plugins are installed succesfully - can check under Manage Jenkins section
-
     <img width="416" alt="VULCAN-Jenkins-Login" src="https://user-images.githubusercontent.com/24245515/103701127-7da73e80-4fcb-11eb-93fb-3bb87616cca2.png">
 
 3. Login into docker 
@@ -131,9 +83,7 @@ This version of VULCAN has 2 (frontend & backend)  `Microservices` which are `Do
 
     `[1.1].` Select Pipeline Project in the next screen <br />
 
-    `[1.2].` Copy the content from "PROJECTS/VULCAN/vulcan-1.3/jenkins/Jenkinsfile" into Pipeline script section
-    
-     <br />
+    `[1.2].` Copy the content from "PROJECTS/VULCAN/vulcan-1.3/jenkins/pipeline-script" into Pipelinse script section <br />
     <img width="877" alt="VULCAN-Jenkins-Pipeline" src="https://user-images.githubusercontent.com/24245515/103701130-7e3fd500-4fcb-11eb-8be8-3f29c5260679.png">  <br />
 
     Save & Apply 

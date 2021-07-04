@@ -1,10 +1,10 @@
 #!/bin/sh
 
-npm install
-npm start
+# npm install
+# npm start
 
 ## Alternatively can use YARN
 
-# yarn
-# yarn build
-# yarn start
+yarn
+yarn build
+yarn start

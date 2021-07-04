@@ -9,18 +9,16 @@ ENV GRADLE_VERSION=6.7
 ENV GRADLE_USER_HOME /.gradle
 ENV GRADLE_HOME=/opt/gradle
 
-# docker adequate permission
-
-RUN groupadd docker && \
-usermod -a -G docker jenkins 
-# usermod -a -G docker jenkins && \
-# chmod 666 /var/run/docker.sock
-
 ENV WORKSPACE_HOME=${JENKINS_HOME}/workspace
 # The below  parameter are set specifically for this project , can be changed accordingly 
 # WORKDIR ${WORKSPACE_HOME}/{jenkins-workspace-name}/{directory-name}
-WORKDIR ${WORKSPACE_HOME}/vulcan-1.4/vulcan-1.4/
-ENV PROJECT_HOME=${WORKSPACE_HOME}/vulcan-1.4/vulcan-1.4
+WORKDIR ${WORKSPACE_HOME}/vulcan-1.5/vulcan-1.5/
+ENV PROJECT_HOME=${WORKSPACE_HOME}/vulcan-1.5/vulcan-1.5
+
+# docker adequate permission clear
+
+RUN groupadd docker
+RUN usermod -aG docker jenkins
 
 RUN apt-get update && \
 apt-get -y install apt-transport-https \
