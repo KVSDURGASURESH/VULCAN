@@ -89,7 +89,7 @@ Recommended way to execute gradle build is via a Gradle wrapper . Can pick the a
 
     <img width="1310" alt="VULCAN-DockerHub-1" src="https://user-images.githubusercontent.com/24245515/103702895-cc090d00-4fcc-11eb-9159-e315ba802760.png">
 
-    <img width="1255" alt="VULCAN-DockerHub-2" src="https://github.com/KVSDURGASURESH/VULCAN/blob/pvt/dkagitha/release1/vulcan-1.2/misc/images/whatnxt-app-dokerhub.png">
+    <img width="1255" alt="vulcan-1 2-whatnxt-app" src="https://user-images.githubusercontent.com/24245515/124398540-dc0f6880-dd33-11eb-88b3-23d68c4105c2.png">
     
 
 `TEST & VALIDATE :`
@@ -100,7 +100,7 @@ Recommended way to execute gradle build is via a Gradle wrapper . Can pick the a
 
     <img width="1310" alt="VULCAN-DockerHub-1" src="https://user-images.githubusercontent.com/24245515/103702895-cc090d00-4fcc-11eb-9159-e315ba802760.png">
 
-    <img width="1255" alt="VULCAN-DockerHub-2" src="https://github.com/KVSDURGASURESH/VULCAN/blob/pvt/dkagitha/release1/vulcan-1.2/misc/images/whatnxt-ui-dokerhub.png">
+    <img width="1255" alt="vulcan-1 2-whatnxt-ui" src="https://user-images.githubusercontent.com/24245515/124398508-a79bac80-dd33-11eb-9df0-059885e87e42.png">
 
 
 2. Access WhatNxt App UI on any `browser`
@@ -120,10 +120,11 @@ Recommended way to execute gradle build is via a Gradle wrapper . Can pick the a
 
     To check the logs via Docker Desktop ,click on Containers, select the desired container name and click logs 
 
-    <img width="972" alt="VULCAN-WhatNxt-UI" src="https://github.com/KVSDURGASURESH/VULCAN/blob/pvt/dkagitha/release1/vulcan-1.2/misc/images/whatnxt-ui-dokerDesktopLogs.png">
+    <img width="972" alt="VULCAN-WhatNxt-UI" src="https://user-images.githubusercontent.com/24245515/124398476-80dd7600-dd33-11eb-8130-2e6e9f66adce.png">
     
+    Here is the UI
 
-    <img width="972" alt="VULCAN-WhatNxt-UI" src="https://user-images.githubusercontent.com/24245515/103701136-80099880-4fcb-11eb-91cf-7f7c097fd415.png">
+    <img width="972" alt="Docker-Desktop-Logs" src="https://user-images.githubusercontent.com/24245515/103701136-80099880-4fcb-11eb-91cf-7f7c097fd415.png">
     
 3. To submit via CURL or POSTMAN
 
