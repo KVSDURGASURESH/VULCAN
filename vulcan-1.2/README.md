@@ -89,7 +89,7 @@ Recommended way to execute gradle build is via a Gradle wrapper . Can pick the a
 
     <img width="1310" alt="VULCAN-DockerHub-1" src="https://user-images.githubusercontent.com/24245515/103702895-cc090d00-4fcc-11eb-9159-e315ba802760.png">
 
-    <img width="1255" alt="VULCAN-DockerHub-2" src="https://user-images.githubusercontent.com/24245515/103702953-d0352a80-4fcc-11eb-890b-78df84db8c0e.png">
+    <img width="1255" alt="VULCAN-DockerHub-2" src="https://github.com/KVSDURGASURESH/VULCAN/blob/pvt/dkagitha/release1/vulcan-1.2/misc/images/whatnxt-app-dokerhub.png">
     
 
 `TEST & VALIDATE :`
@@ -100,7 +100,7 @@ Recommended way to execute gradle build is via a Gradle wrapper . Can pick the a
 
     <img width="1310" alt="VULCAN-DockerHub-1" src="https://user-images.githubusercontent.com/24245515/103702895-cc090d00-4fcc-11eb-9159-e315ba802760.png">
 
-    <img width="1255" alt="VULCAN-DockerHub-2" src="https://user-images.githubusercontent.com/24245515/103702953-d0352a80-4fcc-11eb-890b-78df84db8c0e.png">
+    <img width="1255" alt="VULCAN-DockerHub-2" src="https://github.com/KVSDURGASURESH/VULCAN/blob/pvt/dkagitha/release1/vulcan-1.2/misc/images/whatnxt-ui-dokerhub.png">
 
 
 2. Access WhatNxt App UI on any `browser`
@@ -117,6 +117,11 @@ Recommended way to execute gradle build is via a Gradle wrapper . Can pick the a
     4. Refresh the page and validate GET <br /> 
 
     `Note` : UI would take ~1-2 min to come up on the browser !
+
+    To check the logs via Docker Desktop ,click on Containers, select the desired container name and click logs 
+
+    <img width="972" alt="VULCAN-WhatNxt-UI" src="https://github.com/KVSDURGASURESH/VULCAN/blob/pvt/dkagitha/release1/vulcan-1.2/misc/images/whatnxt-ui-dokerDesktopLogs.png">
+    
 
     <img width="972" alt="VULCAN-WhatNxt-UI" src="https://user-images.githubusercontent.com/24245515/103701136-80099880-4fcb-11eb-91cf-7f7c097fd415.png">
     
