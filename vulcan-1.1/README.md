@@ -57,3 +57,8 @@
 
     <img width="1093" alt="VULCAN-WhatNxt-Postman" src="https://user-images.githubusercontent.com/24245515/103701135-7ed86b80-4fcb-11eb-817c-7fafaed0f062.png">
 
+### Note: For Windows users while using docker setup make sure the you enforce the "end_of_line = lf" in the editor.settings file (vulcan-1.1/whatnxt-ui/docker/core/.editorconfig)
+
+```bash
+end_of_line = lf
+```

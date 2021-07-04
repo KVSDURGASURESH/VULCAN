@@ -102,3 +102,5 @@ build
 .bin
 
 *gitattributes
+
+/misc

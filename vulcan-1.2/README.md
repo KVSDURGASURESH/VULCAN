@@ -4,6 +4,24 @@
 
 ##### RECOMMENDED ENV : DEV
 
+PRE-REQUISITES
+
+#### 1. Install Gradle 
+
+Mac:
+
+```bash
+    $ brew install gradle 
+```  
+Windows & Linux : https://gradle.org/install/
+#### 2. Install Gradle wrapper
+
+Recommended way to execute gradle build is via a Gradle wrapper . Can pick the appropriate version (below is on example)
+
+```bash
+    $ gradle wrapper --gradle-version 7.1 --distribution-type all
+```  
+
 `GRADLE TASKS :`
 
 1. Stay at root (where you have the parent build.gradle file is present)
@@ -13,30 +31,58 @@
 
 2. `Build` the project 
     ```bash
+    $ gradle build 
+    ```
+    or 
+
+    ```bash
     $ ./gradlew build 
     ```
 
 3. `Check` the available  gradle tasks 
+    ```bash
+    $ gradle task 
+    ```
+    or
+
     ```bash
     $ ./gradlew task 
     ```
 
 2. `Build` the images 
     ```bash
+    $ gradle docker 
+    ```
+    or 
+    ```bash
     $ ./gradlew docker 
     ```
 
 3. `Run` the containers
+    ```bash
+    $ gradle dockerRun 
+    ```
+    or
+
     ```bash
     $ ./gradlew dockerRun 
     ```
 
 4. `Tag` the images to push to Docker Registry , in this case DockerHub
     ```bash
+    $ gradle dockerTagDockerHub
+    ```
+    or
+
+    ```bash
     $ ./gradlew dockerTagDockerHub
     ```
 
 5. `Push` the images to push to Docker Registry , in this case DockerHub
+    ```bash
+    $ gradle dockerPushDockerHub
+    ```
+    or 
     ```bash
     $ ./gradlew dockerPushDockerHub
     ```
