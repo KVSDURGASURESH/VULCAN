@@ -63,7 +63,7 @@ $ yarn start # npm start
 
     Enter any Text and Validate all CRUD operations
 
-### Note: For Windows users while using docker setup make sure the you enforce the "end_of_line = lf" in the editor.settings file (vulcan-1.1/whatnxt-ui/docker/core/.editorconfig)
+#### Note: For Windows users while using docker setup make sure the you enforce the "end_of_line = lf" in the editor.settings file (vulcan-1.1/whatnxt-ui/docker/core/.editorconfig)
 
 ```bash
 end_of_line = lf
